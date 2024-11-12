@@ -24,12 +24,12 @@ public class VectorSearchQuery extends BaseQuery {
   @Getter private final int efSearch;
 
   public VectorSearchQuery(
-      @NonNull String label, @NonNull String propertyKey, float @NonNull [] queryVector) {
+      String label, @NonNull String propertyKey, float @NonNull [] queryVector) {
     this(label, propertyKey, queryVector, -1);
   }
 
   public VectorSearchQuery(
-      @NonNull String label,
+      String label,
       @NonNull String propertyKey,
       float @NonNull [] queryVector,
       int efSearch) {
