@@ -14,9 +14,14 @@
 package com.antgroup.openspg.server.api.facade.dto.service.request;
 
 import java.util.Set;
+
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class TextSearchRequest {
   private Long projectId;
   private String queryString;
