@@ -15,6 +15,9 @@ package com.antgroup.openspg.cloudext.interfaces.searchengine.model.request.quer
 
 import lombok.Getter;
 import lombok.NonNull;
+import lombok.Setter;
+
+import java.util.Map;
 
 public class VectorSearchQuery extends BaseQuery {
 
@@ -22,6 +25,8 @@ public class VectorSearchQuery extends BaseQuery {
   @Getter private final String propertyKey;
   @Getter private final float[] queryVector;
   @Getter private final int efSearch;
+  @Getter @Setter
+  private Map<String, Object> params;
 
   public VectorSearchQuery(
       String label, @NonNull String propertyKey, float @NonNull [] queryVector) {

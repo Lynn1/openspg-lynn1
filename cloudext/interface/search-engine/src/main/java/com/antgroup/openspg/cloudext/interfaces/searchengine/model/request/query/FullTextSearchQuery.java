@@ -14,20 +14,23 @@
 package com.antgroup.openspg.cloudext.interfaces.searchengine.model.request.query;
 
 import java.util.List;
+import java.util.Map;
 import javax.annotation.Nullable;
 import lombok.Getter;
-import lombok.NonNull;
+import lombok.Setter;
 
 public class FullTextSearchQuery extends BaseQuery {
 
   @Getter private final String queryString;
   @Getter private final List<String> labelConstraints;
+  @Getter @Setter
+  private Map<String, Object> params;
 
-  public FullTextSearchQuery(@NonNull String queryString) {
+  public FullTextSearchQuery(String queryString) {
     this(queryString, null);
   }
 
-  public FullTextSearchQuery(@NonNull String queryString, @Nullable List<String> labelConstraints) {
+  public FullTextSearchQuery(String queryString, @Nullable List<String> labelConstraints) {
     this.queryString = queryString;
     this.labelConstraints = labelConstraints;
   }

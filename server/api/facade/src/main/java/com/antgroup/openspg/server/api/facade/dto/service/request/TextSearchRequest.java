@@ -13,6 +13,7 @@
 
 package com.antgroup.openspg.server.api.facade.dto.service.request;
 
+import java.util.Map;
 import java.util.Set;
 
 import lombok.AllArgsConstructor;
@@ -27,4 +28,5 @@ public class TextSearchRequest {
   private String queryString;
   private Set<String> labelConstraints;
   private Integer topk;
+  private Map<String, Object> params;
 }

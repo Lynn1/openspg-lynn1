@@ -17,6 +17,8 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.Map;
+
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
@@ -27,4 +29,5 @@ public class VectorSearchRequest {
   private float[] queryVector;
   private Integer efSearch;
   private Integer topk;
+  private Map<String, Object> params;
 }
